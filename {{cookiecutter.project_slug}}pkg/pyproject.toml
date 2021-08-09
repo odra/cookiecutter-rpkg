@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}pkg"
+version = "{{cookiecutter.project_version}}"
+description = ""
+authors = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pycurl = "^7.43.0"
+pyOpenSSL = "^20.0.1"
+rpkg = "^1.62"
+six = "^1.16.0"
+GitPython = "^3.1.20"
+rpm = "^0.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-sugar = "^0.9.4"
+
+[tool.poetry.scripts]
+{{cookiecutter.project_slug}}pkg = '{{cookiecutter.project_slug}}pkg.cli:run'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
